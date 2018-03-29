@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <script src="https://unpkg.com/@reactivex/rxjs@5.5.7/dist/global/Rx.js"></script>
+</head>
+<body>    
+</body>
+</html>
+<script>
+    function foo() {
+        console.log('Hello');
+        return 42;
+        return 100; // dead code. will never happen
+    }
+    var x = foo.call();
+    console.log(x);
+  
+</script>

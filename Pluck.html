@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://unpkg.com/@reactivex/rxjs@5.5.7/dist/global/Rx.js"></script>
+
+</head>
+<body>
+    <input type="text">
+</body>
+</html>
+<script>
+    var input = document.querySelector('input');
+    var observable = Rx.Observable.fromEvent(input, 'input');
+    observable
+        .map(event => event.target.value)
+    .debounceTime(2000)
+    //.distincttUntilChanged()
+    .subscribe({
+        next: function (value) {
+            console.log(value);
+        }
+    })
+</script>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+<body>
+    
+    <script src="https://unpkg.com/@reactivex/rxjs@5.5.7/dist/global/Rx.js"></script>
+</body>
+</html>
+<script>
+    var foo = Rx.Observable.create(function (observer) {
+        console.log('JS');
+        observer.next(42);
+        console.log( 'hi');
+    });
+
+    foo.subscribe(function (x) {
+        console.log(x);
+    });
+    foo.subscribe(function (y) {
+        console.log(y);
+    });
+</script>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+<body>
+    <p>Observable Execution </p>
+    <script src="https://unpkg.com/@reactivex/rxjs@5.5.7/dist/global/Rx.js"></script>
+</body>
+</html>
+<script>
+     const one$ = new Observable(observer => {
+        observer.next(1);
+        observer.complete();
+    });
+
+    one$.subscribe({
+        next: value => console.log(value), // 1
+    });
+
+
+
+
+
+
+
+</script>
